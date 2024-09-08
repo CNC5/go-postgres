@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=test_admin
+      - POSTGRES_DB=test
+    ports:
+      - 5432:5432
+    networks:
+      - api-backbone
+
+networks:
+  api-backbone:
+    name: api-backbone
